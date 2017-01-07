@@ -12,7 +12,7 @@
     <div class="container">
       <img src="./assets/logo.png">
       <h1>{{ msg }}</h1>
-      <button @click="addCount"> add counte</button>
+      <a class="waves-effect waves-light btn" @click="addCount"> add counter</a>
       <h2>Essential Links{{counter}}</h2>
       <router-view></router-view>
     </div>
@@ -34,7 +34,7 @@
     },
     computed: {
       counter() {
-        return this.$store.state.count
+        return this.$store.getters.counter
       }
     }
   }

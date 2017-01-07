@@ -20,6 +20,11 @@ const store = new vuex.Store({
       }, 1000)
     }
   },
+  getters:{
+    counter: state => {
+      return state.count
+    }
+  },
   mutations: {
     increment(state) {
       state.count++
